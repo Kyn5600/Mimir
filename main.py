@@ -3,26 +3,33 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import os
 import warnings
+import pickle
+
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 os.system("cls")
-# Load the data from a CSV file
+
+#Load the data from a CSV file
 data = pd.read_csv("conversational_english.csv")
 
-# Split the data into training and testing sets
+#Split the data into training and testing sets
 train_data = data[:int(len(data)*0.8)]
 test_data = data[int(len(data)*0.8):]
 
-# Extract the features from the text data using CountVectorizer
+#Extract the features from the text data using CountVectorizer
 vectorizer = CountVectorizer()
 train_features = vectorizer.fit_transform(train_data['text'])
 test_features = vectorizer.transform(test_data['text'])
 
-# Train a Multinomial Naive Bayes classifier on the training data
+#Train a Multinomial Naive Bayes classifier on the training data
 nb = MultinomialNB()
 nb.fit(train_features, train_data['label'])
 
-# Continuously get user input and make predictions
+#Save the classifier as a pickle file
+with open('conversational_english_classifier.pickle', 'wb') as f:
+    pickle.dump(nb, f)
+
+#Continuously get user input and make predictions
 while True:
     user_input = input("Enter a conversational text: ")
     if user_input == "exit":
@@ -33,6 +40,18 @@ while True:
     user_confirm = input("Is the prediction correct? (yes/no) ")
     if user_confirm == "no" or user_confirm == "No" or user_confirm == "n" or user_confirm == "N":
         if user_input in data['text'].values:
+            correct_label = input("Enter the correct label: ")
+            data = data.append({'text': user_input, 'label': correct_label}, ignore_index=True)
+            # Re-train the classifier with the updated data
+            train_data = data[:int(len(data)*0.8)]
+            test_data = data[int(len(data)*0.8):]
+            train_features = vectorizer.fit_transform(train_data['text'])
+            test_features = vectorizer.transform(test_data['text'])
+            nb = MultinomialNB()
+            nb.fit(train_features, train_data['label'])
+            # Save the updated classifier as a pickle file
+            with open('conversational_english_classifier.pickle', 'wb') as f:
+                pickle.dump(nb, f)
             continue
         else:
             correct_label = input("Enter the correct label: ")
@@ -46,8 +65,21 @@ while True:
             nb.fit(train_features, train_data['label'])
             # Save the updated data to the CSV file
             data.to_csv("conversational_english.csv", index=False)
+            # Save the updated classifier as a pickle file
+            with open('conversational_english_classifier.pickle', 'wb') as f:
+                pickle.dump(nb, f)
     if user_confirm == "yes" or user_confirm == "Yes" or user_confirm == "y" or user_confirm == "Y":
         if user_input in data['text'].values:
+            # Re-train the classifier with the updated data
+            train_data = data[:int(len(data)*0.8)]
+            test_data = data[int(len(data)*0.8):]
+            train_features = vectorizer.fit_transform(train_data['text'])
+            test_features = vectorizer.transform(test_data['text'])
+            nb = MultinomialNB()
+            nb.fit(train_features, train_data['label'])
+            # Save the updated classifier as a pickle file
+            with open('conversational_english_classifier.pickle', 'wb') as f:
+                pickle.dump(nb, f)
             continue
         else:
             correct_label = prediction
@@ -61,6 +93,8 @@ while True:
             nb.fit(train_features, train_data['label'])
             # Save the updated data to the CSV file
             data.to_csv("conversational_english.csv", index=False)
+            # Save the updated classifier as a pickle file
+            with open('conversational_english_classifier.pickle', 'wb') as f:
+                pickle.dump(nb, f)
     if user_confirm == "cancel":
         continue
-    

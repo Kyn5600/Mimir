@@ -4,6 +4,7 @@ from sklearn.naive_bayes import MultinomialNB
 import random 
 import os
 import warnings
+import pickle
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 os.system("cls")
@@ -13,16 +14,12 @@ os.system("cls")
 # Load the data from the CSV file
 data = pd.read_csv("conversational_english.csv")
 
-# Split the data into training and testing sets
-training_data = data[:int(0.8 * len(data))]
-testing_data = data[int(0.8 * len(data)):]
-
 # Convert the text into numerical feature vectors using CountVectorizer
 vectorizer = CountVectorizer()
-text_features = vectorizer.fit_transform(training_data['text'])
 
 # Train a Naive Bayes classifier on the training data
-classifier = MultinomialNB().fit(text_features, training_data['label'])
+with open('conversational_english_classifier.pickle', 'rb') as f:
+    nb = pickle.load(f)
 
 correct = ''
 last_input = ''
@@ -53,7 +50,7 @@ while True:
                 data.to_csv("conversational_english.csv", index=False)
         else:
             user_input_features = vectorizer.transform([user_input])
-            predicted_label = classifier.predict(user_input_features)[0]
+            predicted_label = nb.predict(user_input_features)[0]
             if other_last_input not in data['text'].values and (other_last_input != '' and other_last_input != ' '):
                 newest_data = pd.DataFrame({'text': [other_last_input], 'label': [last_label]})
                 data = data.append(newest_data, ignore_index=True)
