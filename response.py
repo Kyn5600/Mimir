@@ -14,8 +14,12 @@ os.system("cls")
 # Load the data from the CSV file
 data = pd.read_csv("conversational_english.csv")
 
+training_data = data[:int(0.8 * len(data))]
+testing_data = data[int(0.8 * len(data)):]
+
 # Convert the text into numerical feature vectors using CountVectorizer
 vectorizer = CountVectorizer()
+text_features = vectorizer.fit_transform(training_data['text'])
 
 # Train a Naive Bayes classifier on the training data
 with open('conversational_english_classifier.pickle', 'rb') as f:
