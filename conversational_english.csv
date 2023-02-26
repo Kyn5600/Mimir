@@ -1,233 +1,233 @@
-text,label,Unnamed: 2
-Can you tell me a joke?,joke_request,
-I'm not sure because I am an AI,regresponse,
-Why did the chicken cross the road?,joke,
-Where is the bus stop?,regque,
-how are you?,feeling_question,
-What are you doing?,feeling_question,
-I am an AI. How should I know?,regresponse,
-How are you?,feeling_question,
-Goodbye,farewell,
-Bye,farewell,
-"Two whales walk into a bar. One says ""oOooOoooOOh"". The other says ""What the hell Jim""",joke,
-Hi!,greeting,
-I'm not sure. I am an AI,regresponse,
+text,label
+Can you tell me a joke?,joke_request
+I'm not sure because I am an AI,regresponse
+Why did the chicken cross the road?,joke
+Where is the bus stop?,regque
+how are you?,feeling_question
+What are you doing?,feeling_question
+I am an AI. How should I know?,regresponse
+How are you?,feeling_question
+Goodbye,farewell
+Bye,farewell
+"Two whales walk into a bar. One says ""oOooOoooOOh"". The other says ""What the hell Jim""",joke
+Hi!,greeting
+I'm not sure. I am an AI,regresponse
 Hello!,greeting,
-Greetings!,greeting,
-what's up?,regque,
-I'm doing good!,feeling_response,
-What's up?,regque,
-Tell me a joke,joke_request,
-Tell me something funny,joke_request,
-I'm doing great!,feeling_reponse,
-I am an AI. I don't know.,regresponse,
-Not bad!,feeling_response,
-Hi,greeting,
-Hello,greeting,
-how's it going?,regque,
-My name is Zach,name,
-how's it goin,regque,
-what are you up to?,regque,
-I don't know I am and AI,regresponse,
-How are you,feeling_question,
-How's it goin,regque,
-How do you do,feeling_question,
-"A horse walks into a bar and the bartender says ""why the long face""",joke,
-goodbye,farewell,
-hello,greeting,
-Good evening,greeting,
-I'm not sure.,regresponse,
-hello!,greeting,
-What's up,regque,
-Heyo,greeting,
-hi,greeting,
-I am an AI. I can't help you.,regresponse,
-How's it going?,feeling_question,
-I don't know because I am an AI.,regresponse,
-What's up!,regque,
-Greetings,greeting,
-I do not know.,regresponse,
-whats up,regque,
-hows it going,regque,
-How should I know,regresponse,
-bye,farewell,
-See you later,farewell,
-Bye bye,farewell,
-See you,farewell,
-See ya,farewell,
-see ya later,farewell,
-I don't know.,regresponse,
-How should I know?,regresponse,
-why would I know?,regresponse,
-What are you up to?,regque,
-Whats up?,regque,
-whatcha up to?,regque,
-Hey,greeting,
-Whats up,regque,
-tell me a joke,joke_request,
-haha. 69. Nice,joke,
-Can you tell me a joke please?,joke,
-I am good,regresponse,
-What is up?,regque,
-Tell me a joke please,joke_request,
-To get to the other side.,joke,
-how are you,feeling_question,
-Hey tell me a joke,joke,
-what's up,regresponse,
-My favorite color is red!,fav_color_response,
-What is your favorite color?,fav_col_que,
-Heyyy,greeting,
-Heyoo,greeting,
-How are you today?,feeling_question,
-I am good.,feeling_response,
-What's your favorite color?,fav_col_que,
-I'm great!,feeling_response,
-I'm pretty good myself.,feeling_response,
-I'm doing well.,feeling_response,
-I'm doing pretty good,feeling_response,
-What is your favorite color,regresponse,
-My favorite color is red,fav_color_response,
-What's hangin,regque,
-What is your favorite book?,fav_book_que,
-My favorite book is Harry Potter,fav_book_response,
-What's your favorite book?,fav_book_que,
-Do you have a favorite book?,fav_book_que,
-What is your favorite food?,fav_food_que,
-What's your favorite food?,fav_food_que,
-My favorite food is bagel bytes,fav_food_response,
-Do you have a favorite food?,fav_food_que,
-I'm doing well thanks,feeling_response,
-I'm good!,feeling_response,
-I'm pretty well,feeling_response,
-I'm swell thanks,feeling_response,
-I'm great,feeling_response,
-Tell me a new joke,joke,
-Tell me another joke,joke,
-good,feeling_response,
-sup,greeting,
-Pretty good.,feeling_response,
-I'm pretty fine,feeling_response,
-How you doin?,feeling_question,
-How goes it?,farewell,
-How are you doing?,feeling_response,
-What is your favorite movie?,fav_movie_que,
-My favorite movie is The Matrix,fav_movie_response,
-Where would you like to travel?,travel_que,
-I am on the internet. I already exist all over the world!,travel_response,
-How do you waste time?,time_waste_que,
-Using Microsoft Edge to look something up,time_waste_response,
-Which celebrity would you like to meet?,celeb_que,
-I'd love to meet X AE A-XII Musk,celeb_response,
-What celebrity would you like to meet?,celeb_que,
-What's your favorite movie?,fav_movie_que,
-Whats your favorite book,fav_book_que,
-Harry Potter,fav_book_response,
-Would you like to travel somewhere?,travel_que,
-How do you like to waste time?,time_waste_que,
-Where do you want to travel,travel_que,
-I'm well.,feeling_response,
-I'm doing fine.,feeling_response,
-Where would you like to travel someday?,travel_que,
-How are you doing today?,feeling_que,
-I'm doing great!,feeling_response,
-What's your favorite book,fav_book_que,
-whats your favorite movie,fav_movie_que,
-Would you like to meet a celebrity?,celeb_que,
-Where would you like to travel,travel_que,
-What is your favorite travel destination?,travel_que,
-Do you have a favorite travel spot?,travel_que,
-What's your favorite place to visit?,travel_que,
-What's your favorite city to visit?,travel_que,
-Do you have a favorite country to travel to?,travel_que,
-Where's your favorite place to go on vacation?,travel_que,
-Whats your favorite place to visit,travel_que,
-What's your favorite movie of all time?,fav_movie_que,
-What's your number one favorite movie?,fav_movie_que,
-What movie do you watch over and over again?,fav_movie_que,
-What movie do you love the most?,fav_movie_que,
-Do you have a favorite movie?,fav_movie_que,
-What's the best movie you've ever seen?,fav_movie_que,
-What's your go-to movie when you're feeling down?,fav_movie_que,
-What movie always makes you smile?,fav_movie_que,
-What movie could you watch a million times?,fav_movie_que,
-I'm doing well.,feeling_response,
-Where'd you like to travel?,travel_que,
-Is there a celebrity you'd like to meet?,celeb_que,
-do you have a favorite movie?,fav_movie_que,
-Do you have a favorite celebrity?,celeb_que,
-Do you have a guilty pleasure?,guilty_que,
-Whats your favorite color,fav_col_que,
-What is your favorite color?,fav_col_que,
-You got a favorite food?,fav_food_que,
-later,farewell,
-What is your favorite movie?,fav_movie_que,
-How you doing?,feeling_question,
-Do you have a favorite movie,fav_movie_que,
-What is your favorite movie,fav_movie_que,
-I'm great,feeling_response,
-What is your favorite movie?,fav_movie_que,
-what's your favorite movie,fav_movie_que,
-what's your favorite book,fav_book_que,
-what's your favorite color,fav_col_que,
-What movie could you watch over and over?,fav_movie_que,
-What's your most favorite movie?,fav_movie_que,
-Whats your most favorite book?,fav_book_que,
-What book is your favorite?,fav_book_que,
-What food is your favorite?,fav_food_que,
-What's your favorite food?,fav_food_que,
-gimme a joke,joke_request,
-What is your favorite food?,fav_food_que,
-Do you have a favorite food?,fav_food_que,
-Who's your favorite celebrity ,celeb_que,
-Who's your favorite celebrity?,celeb_que,
-Who is your favorite celebrity?,celeb_que,
-What's your favorite movie,fav_movie_response,
-What's your fav food,fav_food_que,
-What celeb would you like to meet,celeb_que,
-What celebrity would you like to meet,celeb_que,
-Good evening,greeting,
-what is your favorite book,fav_book_que,
-what is your favorite movie,fav_movie_que,
-what is your favorite food,fav_food_que,
-whats your favorite food,fav_food_que,
-Where would you like to go to,travel_response,
-Add two numbers.,add,
-Add two numbers,add,
-Add a couple numbers,add,
-What two numbers would you like to add?,add_response,
-What is your favorite food,fav_food_que,
-What is your favorite food?,fav_food_que,
-What is your favorite color,fav_col_que,
-What is your favorite food,fav_food_que,
-What's your favorite food,fav_food_que,
-what's your favorite food,fav_food_que,
-What's your favorite thing to eat,fav_food_que,
-How are you doing,feeling_question,
-Where would you like to go?,travel_que,
-What is your favorite food,fav_food_que,
-What is your favorite book,fav_book_que,
-where would you like to move,travel_que,
-Can you tell me a jokw,joke_request,
-What are you doing,feeling_question,
-tell me something funny,joke_request,
-Hows it going?,regque,
-farewell,farewell,
-Good evening,greeting,
-Good morning,greeting,
-Hows it going,regque,
-see you,farewell,
-see you later,farewell,
-See ya later,farewell,
-Whatcha up to?,regque,
-Tell me another joke please,joke_request,
-Heyy,greeting,
-What is your facorite color?,fav_col_que,
-Add two numbers for me,add,
-Not bad,feeling_response,
-I'm doing great!,feeling_response,
-I'm doing great!,feeling_response,
-bad,feeling_response,
-How are u,feeling_response,
-What is the meaning of life,regque,
-Tired,feeling_response,
-Good,feeling_response,
+Greetings!,greeting
+what's up?,regque
+I'm doing good!,feeling_response
+What's up?,regque
+Tell me a joke,joke_request
+Tell me something funny,joke_request
+I'm doing great!,feeling_reponse
+I am an AI. I don't know.,regresponse
+Not bad!,feeling_response
+Hi,greeting
+Hello,greeting
+how's it going?,regque
+My name is Zach,name
+how's it goin,regque
+what are you up to?,regque
+I don't know I am and AI,regresponse
+How are you,feeling_question
+How's it goin,regque
+How do you do,feeling_question
+"A horse walks into a bar and the bartender says ""why the long face""",joke
+goodbye,farewell
+hello,greeting
+Good evening,greeting
+I'm not sure.,regresponse
+hello!,greeting
+What's up,regque
+Heyo,greeting
+hi,greeting
+I am an AI. I can't help you.,regresponse
+How's it going?,feeling_question
+I don't know because I am an AI.,regresponse
+What's up!,regque
+Greetings,greeting
+I do not know.,regresponse
+whats up,regque
+hows it going,regque
+How should I know,regresponse
+bye,farewell
+See you later,farewell
+Bye bye,farewell
+See you,farewell
+See ya,farewell
+see ya later,farewell
+I don't know.,regresponse
+How should I know?,regresponse
+why would I know?,regresponse
+What are you up to?,regque
+Whats up?,regque
+whatcha up to?,regque
+Hey,greeting
+Whats up,regque
+tell me a joke,joke_request
+haha. 69. Nice,joke
+Can you tell me a joke please?,joke
+I am good,regresponse
+What is up?,regque
+Tell me a joke please,joke_request
+To get to the other side.,joke
+how are you,feeling_question
+Hey tell me a joke,joke
+what's up,regresponse
+My favorite color is red!,fav_color_response
+What is your favorite color?,fav_col_que
+Heyyy,greeting
+Heyoo,greeting
+How are you today?,feeling_question
+I am good.,feeling_response
+What's your favorite color?,fav_col_que
+I'm great!,feeling_response
+I'm pretty good myself.,feeling_response
+I'm doing well.,feeling_response
+I'm doing pretty good,feeling_response
+What is your favorite color,regresponse
+My favorite color is red,fav_color_response
+What's hangin,regque
+What is your favorite book?,fav_book_que
+My favorite book is Harry Potter,fav_book_response
+What's your favorite book?,fav_book_que
+Do you have a favorite book?,fav_book_que
+What is your favorite food?,fav_food_que
+What's your favorite food?,fav_food_que
+My favorite food is bagel bytes,fav_food_response
+Do you have a favorite food?,fav_food_que
+I'm doing well thanks,feeling_response
+I'm good!,feeling_response
+I'm pretty well,feeling_response
+I'm swell thanks,feeling_response
+I'm great,feeling_response
+Tell me a new joke,joke
+Tell me another joke,joke
+good,feeling_response
+sup,greeting
+Pretty good.,feeling_response
+I'm pretty fine,feeling_response
+How you doin?,feeling_question
+How goes it?,farewell
+How are you doing?,feeling_response
+What is your favorite movie?,fav_movie_que
+My favorite movie is The Matrix,fav_movie_response
+Where would you like to travel?,travel_que
+I am on the internet. I already exist all over the world!,travel_response
+How do you waste time?,time_waste_que
+Using Microsoft Edge to look something up,time_waste_response
+Which celebrity would you like to meet?,celeb_que
+I'd love to meet X AE A-XII Musk,celeb_response
+What celebrity would you like to meet?,celeb_que
+What's your favorite movie?,fav_movie_que
+Whats your favorite book,fav_book_que
+Harry Potter,fav_book_response
+Would you like to travel somewhere?,travel_que
+How do you like to waste time?,time_waste_que
+Where do you want to travel,travel_que
+I'm well.,feeling_response
+I'm doing fine.,feeling_response
+Where would you like to travel someday?,travel_que
+How are you doing today?,feeling_que
+I'm doing great!,feeling_response
+What's your favorite book,fav_book_que
+whats your favorite movie,fav_movie_que
+Would you like to meet a celebrity?,celeb_que
+Where would you like to travel,travel_que
+What is your favorite travel destination?,travel_que
+Do you have a favorite travel spot?,travel_que
+What's your favorite place to visit?,travel_que
+What's your favorite city to visit?,travel_que
+Do you have a favorite country to travel to?,travel_que
+Where's your favorite place to go on vacation?,travel_que
+Whats your favorite place to visit,travel_que
+What's your favorite movie of all time?,fav_movie_que
+What's your number one favorite movie?,fav_movie_que
+What movie do you watch over and over again?,fav_movie_que
+What movie do you love the most?,fav_movie_que
+Do you have a favorite movie?,fav_movie_que
+What's the best movie you've ever seen?,fav_movie_que
+What's your go-to movie when you're feeling down?,fav_movie_que
+What movie always makes you smile?,fav_movie_que
+What movie could you watch a million times?,fav_movie_que
+I'm doing well.,feeling_response
+Where'd you like to travel?,travel_que
+Is there a celebrity you'd like to meet?,celeb_que
+do you have a favorite movie?,fav_movie_que
+Do you have a favorite celebrity?,celeb_que
+Do you have a guilty pleasure?,guilty_que
+Whats your favorite color,fav_col_que
+What is your favorite color?,fav_col_que
+You got a favorite food?,fav_food_que
+later,farewell
+What is your favorite movie?,fav_movie_que
+How you doing?,feeling_question
+Do you have a favorite movie,fav_movie_que
+What is your favorite movie,fav_movie_que
+I'm great,feeling_response
+What is your favorite movie?,fav_movie_que
+what's your favorite movie,fav_movie_que
+what's your favorite book,fav_book_que
+what's your favorite color,fav_col_que
+What movie could you watch over and over?,fav_movie_que
+What's your most favorite movie?,fav_movie_que
+Whats your most favorite book?,fav_book_que
+What book is your favorite?,fav_book_que
+What food is your favorite?,fav_food_que
+What's your favorite food?,fav_food_que
+gimme a joke,joke_request
+What is your favorite food?,fav_food_que
+Do you have a favorite food?,fav_food_que
+Who's your favorite celebrity ,celeb_que
+Who's your favorite celebrity?,celeb_que
+Who is your favorite celebrity?,celeb_que
+What's your favorite movie,fav_movie_response
+What's your fav food,fav_food_que
+What celeb would you like to meet,celeb_que
+What celebrity would you like to meet,celeb_que
+Good evening,greeting
+what is your favorite book,fav_book_que
+what is your favorite movie,fav_movie_que
+what is your favorite food,fav_food_que
+whats your favorite food,fav_food_que
+Where would you like to go to,travel_response
+Add two numbers.,add
+Add two numbers,add
+Add a couple numbers,add
+What two numbers would you like to add?,add_response
+What is your favorite food,fav_food_que
+What is your favorite food?,fav_food_que
+What is your favorite color,fav_col_que
+What is your favorite food,fav_food_que
+What's your favorite food,fav_food_que
+what's your favorite food,fav_food_que
+What's your favorite thing to eat,fav_food_que
+How are you doing,feeling_question
+Where would you like to go?,travel_que
+What is your favorite food,fav_food_que
+What is your favorite book,fav_book_que
+where would you like to move,travel_que
+Can you tell me a jokw,joke_request
+What are you doing,feeling_question
+tell me something funny,joke_request
+Hows it going?,regque
+farewell,farewell
+Good evening,greeting
+Good morning,greeting
+Hows it going,regque
+see you,farewell
+see you later,farewell
+See ya later,farewell
+Whatcha up to?,regque
+Tell me another joke please,joke_request
+Heyy,greeting
+What is your facorite color?,fav_col_que
+Add two numbers for me,add
+Not bad,feeling_response
+I'm doing great!,feeling_response
+I'm doing great!,feeling_response
+bad,feeling_response
+How are u,feeling_response
+What is the meaning of life,regque
+Tired,feeling_response
+Good,feeling_response
