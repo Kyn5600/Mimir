@@ -61,30 +61,8 @@ while True:
                 newest_data = pd.DataFrame({'text': [other_last_input], 'label': [last_label]})
                 data = data.append(newest_data, ignore_index=True)
                 data.to_csv("conversational_english.csv", index=False)
-            if predicted_label == 'joke_request':
-                predicted_label = 'joke'
-            if predicted_label == 'feeling_question':
-                predicted_label = 'feeling_response'
-            if predicted_label == 'regque':
-                predicted_label = 'regresponse'
-            if predicted_label == 'fav_col_que':
-                predicted_label = 'fav_color_response'
-            if predicted_label == 'fav_food_que':
-                predicted_label = 'fav_food_response'
-            if predicted_label == 'fav_book_que':
-                predicted_label = 'fav_book_response'
-            if predicted_label == 'fav_movie_que':
-                predicted_label = 'fav_movie_response'
-            if predicted_label == 'travel_que':
-                predicted_label = 'travel_response'
-            if predicted_label == 'guilty_que':
-                predicted_label = 'guilty_response'
-            if predicted_label == 'time_waste_que':
-                predicted_label = 'time_waste_response'
-            if predicted_label == 'celeb_que':
-                predicted_label = 'celeb_response'
-            if predicted_label == 'add':
-                predicted_label = 'add_response'
+            if predicted_label.contains('fav') and predicted_label.contains('que'):
+                queType = predicted_label.replace('que','response')      
             response = data.loc[data['label'] == predicted_label, 'text'].sample().values[0]
             print(name, response)
             last_input = user_input

@@ -12,7 +12,7 @@ Bye,farewell
 "Two whales walk into a bar. One says ""oOooOoooOOh"". The other says ""What the hell Jim""",joke
 Hi!,greeting
 I'm not sure. I am an AI,regresponse
-Hello!,greeting,
+Hello!,greeting
 Greetings!,greeting
 what's up?,regque
 I'm doing good!,feeling_response
@@ -231,3 +231,12 @@ How are u,feeling_response
 What is the meaning of life,regque
 Tired,feeling_response
 Good,feeling_response
+what is your favorite animal,fav_animal_que
+what is your favorite animal,fav_animal_que
+what's your favorite animal,fav_animal_que
+what is your favorite animal,fav_animal_que
+what is your favorite animal,fav_animal_que
+what is your favorite animal,fav_animal_que
+My favorite food is bagel bytes,fav_food_response
+What is your favorite animal,fav_animal_que
+what is your favorite animal,fav_animal_que

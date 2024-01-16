@@ -9,92 +9,59 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 os.system("cls")
 
-#Load the data from a CSV file
+# Load the data from a CSV file
 data = pd.read_csv("conversational_english.csv")
 
-#Split the data into training and testing sets
-train_data = data[:int(len(data)*0.8)]
-test_data = data[int(len(data)*0.8):]
+# Function to train and save the model and vectorizer
+def train_and_save_model(data):
+    vectorizer = CountVectorizer()
+    X = vectorizer.fit_transform(data['text'])
+    y = data['label']
+    clf = MultinomialNB()
+    clf.fit(X, y)
+    with open('conversational_english_classifier.pkl', 'wb') as f:
+        pickle.dump(clf, f)
+    with open('vectorizer.pkl', 'wb') as f:
+        pickle.dump(vectorizer, f)
 
-#Extract the features from the text data using CountVectorizer
-vectorizer = CountVectorizer()
-train_features = vectorizer.fit_transform(train_data['text'])
-test_features = vectorizer.transform(test_data['text'])
+# Initial training
+train_and_save_model(data)
 
-#Train a Multinomial Naive Bayes classifier on the training data
-nb = MultinomialNB()
-nb.fit(train_features, train_data['label'])
 
-#Save the classifier as a pickle file
-with open('conversational_english_classifier.pickle', 'wb') as f:
-    pickle.dump(nb, f)
 
-#Continuously get user input and make predictions
+# Continuously get user input and make predictions
 while True:
+    # Load the trained Naive Bayes classifier and vectorizer
+    with open('conversational_english_classifier.pkl', 'rb') as f:
+        nb = pickle.load(f)
+    with open('vectorizer.pkl', 'rb') as f:
+        vectorizer = pickle.load(f)
+        
     user_input = input("Enter a conversational text: ")
-    if user_input == "exit":
+    if user_input.lower() == "exit":
         break
+    
     input_features = vectorizer.transform([user_input])
     prediction = nb.predict(input_features)[0]
     print("Prediction:", prediction)
+
     user_confirm = input("Is the prediction correct? (yes/no) ")
-    if user_confirm == "no" or user_confirm == "No" or user_confirm == "n" or user_confirm == "N":
-        if user_input in data['text'].values:
-            correct_label = input("Enter the correct label: ")
-            data = data.append({'text': user_input, 'label': correct_label}, ignore_index=True)
-            # Re-train the classifier with the updated data
-            train_data = data[:int(len(data)*0.8)]
-            test_data = data[int(len(data)*0.8):]
-            train_features = vectorizer.fit_transform(train_data['text'])
-            test_features = vectorizer.transform(test_data['text'])
-            nb = MultinomialNB()
-            nb.fit(train_features, train_data['label'])
-            # Save the updated classifier as a pickle file
-            with open('conversational_english_classifier.pickle', 'wb') as f:
-                pickle.dump(nb, f)
-            continue
-        else:
-            correct_label = input("Enter the correct label: ")
-            data = data.append({'text': user_input, 'label': correct_label}, ignore_index=True)
-            # Re-train the classifier with the updated data
-            train_data = data[:int(len(data)*0.8)]
-            test_data = data[int(len(data)*0.8):]
-            train_features = vectorizer.fit_transform(train_data['text'])
-            test_features = vectorizer.transform(test_data['text'])
-            nb = MultinomialNB()
-            nb.fit(train_features, train_data['label'])
-            # Save the updated data to the CSV file
-            data.to_csv("conversational_english.csv", index=False)
-            # Save the updated classifier as a pickle file
-            with open('conversational_english_classifier.pickle', 'wb') as f:
-                pickle.dump(nb, f)
-    if user_confirm == "yes" or user_confirm == "Yes" or user_confirm == "y" or user_confirm == "Y":
-        if user_input in data['text'].values:
-            # Re-train the classifier with the updated data
-            train_data = data[:int(len(data)*0.8)]
-            test_data = data[int(len(data)*0.8):]
-            train_features = vectorizer.fit_transform(train_data['text'])
-            test_features = vectorizer.transform(test_data['text'])
-            nb = MultinomialNB()
-            nb.fit(train_features, train_data['label'])
-            # Save the updated classifier as a pickle file
-            with open('conversational_english_classifier.pickle', 'wb') as f:
-                pickle.dump(nb, f)
-            continue
-        else:
-            correct_label = prediction
-            data = data.append({'text': user_input, 'label': correct_label}, ignore_index=True)
-            # Re-train the classifier with the updated data
-            train_data = data[:int(len(data)*0.8)]
-            test_data = data[int(len(data)*0.8):]
-            train_features = vectorizer.fit_transform(train_data['text'])
-            test_features = vectorizer.transform(test_data['text'])
-            nb = MultinomialNB()
-            nb.fit(train_features, train_data['label'])
-            # Save the updated data to the CSV file
-            data.to_csv("conversational_english.csv", index=False)
-            # Save the updated classifier as a pickle file
-            with open('conversational_english_classifier.pickle', 'wb') as f:
-                pickle.dump(nb, f)
-    if user_confirm == "cancel":
+    if user_confirm in ["no", "No", "n", "N"]:
+        correct_label = input("Enter the correct label: ")
+        new_row = pd.DataFrame({'text': [user_input], 'label': [correct_label]})
+        data = pd.concat([data, new_row], ignore_index=True)
+        data.to_csv("conversational_english.csv", index=False)
+        train_and_save_model(data)  # Retrain and save the model and vectorizer
+        # Reload the model and vectorizer
+        with open('conversational_english_classifier.pkl', 'rb') as f:
+            nb = pickle.load(f)
+        with open('vectorizer.pkl', 'rb') as f:
+            vectorizer = pickle.load(f)
+        print("Retrained model")
+
+    elif user_confirm in ["yes", "Yes", "y", "Y"]:
+        # You can decide if you want to do something when the prediction is correct
+        continue
+
+    elif user_confirm == "cancel":
         continue
