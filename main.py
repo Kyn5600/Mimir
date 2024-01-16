@@ -60,8 +60,16 @@ while True:
         print("Retrained model")
 
     elif user_confirm in ["yes", "Yes", "y", "Y"]:
-        # You can decide if you want to do something when the prediction is correct
-        continue
-
+        # Check if the user input is already in the data
+        if not any(data['text'] == user_input):
+            # Add the user input with its predicted label to the data
+            new_row = pd.DataFrame({'text': [user_input], 'label': [prediction]})
+            data = pd.concat([data, new_row], ignore_index=True)
+            data.to_csv("conversational_english.csv", index=False)
+            # Retrain and save the model and vectorizer
+            train_and_save_model(data)
+            # Print a message indicating the model was retrained
+            print("Model retrained with new input.")
+            
     elif user_confirm == "cancel":
         continue
