@@ -112,8 +112,8 @@ How goes it?,farewell
 How are you doing?,feeling_response
 What is your favorite movie?,fav_movie_que
 My favorite movie is The Matrix,fav_movie_response
-Where would you like to travel?,travel_que
-I am on the internet. I already exist all over the world!,travel_response
+Where would you like to travel?,fav_trave_que
+I am on the internet. I already exist all over the world!,fav_trave_response
 How do you waste time?,time_waste_que
 Using Microsoft Edge to look something up,time_waste_response
 Which celebrity would you like to meet?,celeb_que
@@ -122,25 +122,25 @@ What celebrity would you like to meet?,celeb_que
 What's your favorite movie?,fav_movie_que
 Whats your favorite book,fav_book_que
 Harry Potter,fav_book_response
-Would you like to travel somewhere?,travel_que
+Would you like to travel somewhere?,fav_trave_que
 How do you like to waste time?,time_waste_que
-Where do you want to travel,travel_que
+Where do you want to travel,fav_trave_que
 I'm well.,feeling_response
 I'm doing fine.,feeling_response
-Where would you like to travel someday?,travel_que
+Where would you like to travel someday?,fav_trave_que
 How are you doing today?,feeling_que
 I'm doing great!,feeling_response
 What's your favorite book,fav_book_que
 whats your favorite movie,fav_movie_que
 Would you like to meet a celebrity?,celeb_que
-Where would you like to travel,travel_que
-What is your favorite travel destination?,travel_que
-Do you have a favorite travel spot?,travel_que
-What's your favorite place to visit?,travel_que
-What's your favorite city to visit?,travel_que
-Do you have a favorite country to travel to?,travel_que
-Where's your favorite place to go on vacation?,travel_que
-Whats your favorite place to visit,travel_que
+Where would you like to travel,fav_trave_que
+What is your favorite travel destination?,fav_trave_que
+Do you have a favorite travel spot?,fav_trave_que
+What's your favorite place to visit?,fav_trave_que
+What's your favorite city to visit?,fav_trave_que
+Do you have a favorite country to travel to?,fav_trave_que
+Where's your favorite place to go on vacation?,fav_trave_que
+Whats your favorite place to visit,fav_trave_que
 What's your favorite movie of all time?,fav_movie_que
 What's your number one favorite movie?,fav_movie_que
 What movie do you watch over and over again?,fav_movie_que
@@ -151,7 +151,7 @@ What's your go-to movie when you're feeling down?,fav_movie_que
 What movie always makes you smile?,fav_movie_que
 What movie could you watch a million times?,fav_movie_que
 I'm doing well.,feeling_response
-Where'd you like to travel?,travel_que
+Where'd you like to travel?,fav_trave_que
 Is there a celebrity you'd like to meet?,celeb_que
 do you have a favorite movie?,fav_movie_que
 Do you have a favorite celebrity?,celeb_que
@@ -190,7 +190,7 @@ what is your favorite book,fav_book_que
 what is your favorite movie,fav_movie_que
 what is your favorite food,fav_food_que
 whats your favorite food,fav_food_que
-Where would you like to go to,travel_response
+Where would you like to go to,fav_trave_response
 Add two numbers.,add
 Add two numbers,add
 Add a couple numbers,add
@@ -203,10 +203,10 @@ What's your favorite food,fav_food_que
 what's your favorite food,fav_food_que
 What's your favorite thing to eat,fav_food_que
 How are you doing,feeling_question
-Where would you like to go?,travel_que
+Where would you like to go?,fav_trave_que
 What is your favorite food,fav_food_que
 What is your favorite book,fav_book_que
-where would you like to move,travel_que
+where would you like to move,fav_trave_que
 Can you tell me a jokw,joke_request
 What are you doing,feeling_question
 tell me something funny,joke_request
@@ -227,7 +227,7 @@ Not bad,feeling_response
 I'm doing great!,feeling_response
 I'm doing great!,feeling_response
 bad,feeling_response
-How are u,feeling_response
+How are u,feeling_que
 What is the meaning of life,regque
 Tired,feeling_response
 Good,feeling_response
@@ -252,3 +252,4 @@ What's your number one animal?,fav_animal_que
 My favorite animal is a bug,fav_animal_response
 Do you have a favorite kind of animal?,fav_animal_que
 Pretty good,feeling_response
+what is your favorite place to go to,fav_trave_que

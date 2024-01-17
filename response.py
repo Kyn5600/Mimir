@@ -89,21 +89,25 @@ while True:
                 last_label = predicted_label
                 predicted_label = predicted_label.replace('que','response')      
                 response = data.loc[data['label'] == predicted_label, 'text'].sample().values[0]
-                print(name, response)
+                print(name + response)
+                last_input = user_input
+            if predicted_label == 'joke_request':
+                last_label = predicted_label
+                predicted_label = 'joke'
+                response = data.loc[data['label'] == predicted_label, 'text'].sample().values[0]
+                print(name + response)
                 last_input = user_input
             if predicted_label == 'feeling_question':
                 last_label = predicted_label
                 response = data.loc[data['label'] == 'feeling_response', 'text'].sample().values[0]
-                print(name, response)
+                print(name + response)
                 if randomNum>=25:
-                    print(name,data.loc[data['label'] == 'feeling_question', 'text'].sample().values[0])
+                    print(name + data.loc[data['label'] == 'feeling_question', 'text'].sample().values[0])
                     new_user_input = input("You re: ")
                     if new_user_input == 'wrong':
                         print(name+ last_label)
                         new_label = input("Enter the correct label for the user input: ")
-                        if user_input in data['text'].values:
-                            continue
-                        else:
+                        if not any(data['text'] == new_user_input):
                             new_row = pd.DataFrame({'text': [new_user_input], 'label': [new_label]})
                             data = pd.concat([data, new_row], ignore_index=True)
                             data.to_csv("conversational_english.csv", index=False)
@@ -117,10 +121,10 @@ while True:
                 print(name, answer[0], '+', answer[1], '=', add_answer)
                 continue
             other_last_input = last_input
-            if predicted_label != 'feeling_question' or ('fav' in predicted_label and 'que' in predicted_label) or predicted_label != 'feeling_response' or predicted_label != 'joke_request':
+            if predicted_label != 'feeling_question' and ('fav' not in predicted_label and 'que' not in predicted_label) and predicted_label != 'feeling_response' and predicted_label != 'joke_request':
                 last_label = predicted_label
                 response = data.loc[data['label'] == predicted_label, 'text'].sample().values[0]
-                print(name, response)
+                print(name+ response)
             if last_label == 'farewell':
                 endCheck = input("Would you like to end this session?")
                 if endCheck == 'yes':
