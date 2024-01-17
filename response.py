@@ -40,6 +40,7 @@ correct = ''
 last_input = ''
 other_last_input = ''
 last_label = ''
+prev_last_label = ''
 name = "Bot:"
 print("Would you like to name me?")
 nameCheck = input("You: ")
@@ -75,16 +76,6 @@ while True:
         else:
             user_input_features = vectorizer.transform([user_input])
             predicted_label = nb.predict(user_input_features)[0]
-            if not any(data['text'] == user_input):
-                new_row = pd.DataFrame({'text': [user_input], 'label': [predicted_label]})
-                data = pd.concat([data, new_row], ignore_index=True)
-                data.to_csv("conversational_english.csv", index=False)
-                train_and_save_model(data)
-            if other_last_input not in data['text'].values and (other_last_input != '' and other_last_input != ' '):
-                new_row = pd.DataFrame({'text': [other_last_input], 'label': [last_label]})
-                data = pd.concat([data, new_row], ignore_index=True)
-                data.to_csv("conversational_english.csv", index=False)
-                train_and_save_model(data)
             if 'fav' in predicted_label and 'que' in predicted_label:
                 last_label = predicted_label
                 predicted_label = predicted_label.replace('que','response')      
@@ -120,11 +111,17 @@ while True:
                 add_answer = int(answer[0]) + int(answer[1])
                 print(name, answer[0], '+', answer[1], '=', add_answer)
                 continue
-            other_last_input = last_input
             if predicted_label != 'feeling_question' and ('fav' not in predicted_label and 'que' not in predicted_label) and predicted_label != 'feeling_response' and predicted_label != 'joke_request':
                 last_label = predicted_label
                 response = data.loc[data['label'] == predicted_label, 'text'].sample().values[0]
                 print(name+ response)
+            if other_last_input not in data['text'].values and (other_last_input != '' and other_last_input != ' '):
+                new_row = pd.DataFrame({'text': [other_last_input], 'label': [prev_last_label]})
+                data = pd.concat([data, new_row], ignore_index=True)
+                data.to_csv("conversational_english.csv", index=False)
+                train_and_save_model(data)
+            other_last_input = last_input
+            prev_last_label = last_label
             if last_label == 'farewell':
                 endCheck = input("Would you like to end this session?")
                 if endCheck == 'yes':

@@ -74,7 +74,7 @@ To get to the other side.,joke
 how are you,feeling_question
 Hey tell me a joke,joke
 what's up,regresponse
-My favorite color is red!,fav_color_response
+My favorite color is red!,fav_col_response
 What is your favorite color?,fav_col_que
 Heyyy,greeting
 Heyoo,greeting
@@ -86,7 +86,7 @@ I'm pretty good myself.,feeling_response
 I'm doing well.,feeling_response
 I'm doing pretty good,feeling_response
 What is your favorite color,regresponse
-My favorite color is red,fav_color_response
+My favorite color is red,fav_col_response
 What's hangin,regque
 What is your favorite book?,fav_book_que
 My favorite book is Harry Potter,fav_book_response
@@ -112,35 +112,35 @@ How goes it?,farewell
 How are you doing?,feeling_response
 What is your favorite movie?,fav_movie_que
 My favorite movie is The Matrix,fav_movie_response
-Where would you like to travel?,fav_trave_que
-I am on the internet. I already exist all over the world!,fav_trave_response
-How do you waste time?,time_waste_que
-Using Microsoft Edge to look something up,time_waste_response
-Which celebrity would you like to meet?,celeb_que
-I'd love to meet X AE A-XII Musk,celeb_response
-What celebrity would you like to meet?,celeb_que
+Where would you like to travel?,fav_travel_que
+I am on the internet. I already exist all over the world!,fav_travel_response
+How do you waste time?,fav_timewaste_que
+Using Microsoft Edge to look something up,fav_timewaste_response
+Which celebrity would you like to meet?,fav_celeb_que
+I'd love to meet X AE A-XII Musk,fav_celeb_response
+What celebrity would you like to meet?,fav_celeb_que
 What's your favorite movie?,fav_movie_que
 Whats your favorite book,fav_book_que
 Harry Potter,fav_book_response
-Would you like to travel somewhere?,fav_trave_que
-How do you like to waste time?,time_waste_que
-Where do you want to travel,fav_trave_que
+Would you like to travel somewhere?,fav_travel_que
+How do you like to waste time?,fav_timewaste_que
+Where do you want to travel,fav_travel_que
 I'm well.,feeling_response
 I'm doing fine.,feeling_response
-Where would you like to travel someday?,fav_trave_que
+Where would you like to travel someday?,fav_travel_que
 How are you doing today?,feeling_que
 I'm doing great!,feeling_response
 What's your favorite book,fav_book_que
 whats your favorite movie,fav_movie_que
-Would you like to meet a celebrity?,celeb_que
-Where would you like to travel,fav_trave_que
-What is your favorite travel destination?,fav_trave_que
-Do you have a favorite travel spot?,fav_trave_que
-What's your favorite place to visit?,fav_trave_que
-What's your favorite city to visit?,fav_trave_que
-Do you have a favorite country to travel to?,fav_trave_que
-Where's your favorite place to go on vacation?,fav_trave_que
-Whats your favorite place to visit,fav_trave_que
+Would you like to meet a celebrity?,fav_celeb_que
+Where would you like to travel,fav_travel_que
+What is your favorite travel destination?,fav_travel_que
+Do you have a favorite travel spot?,fav_travel_que
+What's your favorite place to visit?,fav_travel_que
+What's your favorite city to visit?,fav_travel_que
+Do you have a favorite country to travel to?,fav_travel_que
+Where's your favorite place to go on vacation?,fav_travel_que
+Whats your favorite place to visit,fav_travel_que
 What's your favorite movie of all time?,fav_movie_que
 What's your number one favorite movie?,fav_movie_que
 What movie do you watch over and over again?,fav_movie_que
@@ -151,10 +151,10 @@ What's your go-to movie when you're feeling down?,fav_movie_que
 What movie always makes you smile?,fav_movie_que
 What movie could you watch a million times?,fav_movie_que
 I'm doing well.,feeling_response
-Where'd you like to travel?,fav_trave_que
-Is there a celebrity you'd like to meet?,celeb_que
+Where'd you like to travel?,fav_travel_que
+Is there a celebrity you'd like to meet?,fav_celeb_que
 do you have a favorite movie?,fav_movie_que
-Do you have a favorite celebrity?,celeb_que
+Do you have a favorite celebrity?,fav_celeb_que
 Do you have a guilty pleasure?,guilty_que
 Whats your favorite color,fav_col_que
 What is your favorite color?,fav_col_que
@@ -178,19 +178,19 @@ What's your favorite food?,fav_food_que
 gimme a joke,joke_request
 What is your favorite food?,fav_food_que
 Do you have a favorite food?,fav_food_que
-Who's your favorite celebrity ,celeb_que
-Who's your favorite celebrity?,celeb_que
-Who is your favorite celebrity?,celeb_que
+Who's your favorite celebrity ,fav_celeb_que
+Who's your favorite celebrity?,fav_celeb_que
+Who is your favorite celebrity?,fav_celeb_que
 What's your favorite movie,fav_movie_response
 What's your fav food,fav_food_que
-What celeb would you like to meet,celeb_que
-What celebrity would you like to meet,celeb_que
+What celeb would you like to meet,fav_celeb_que
+What celebrity would you like to meet,fav_celeb_que
 Good evening,greeting
 what is your favorite book,fav_book_que
 what is your favorite movie,fav_movie_que
 what is your favorite food,fav_food_que
 whats your favorite food,fav_food_que
-Where would you like to go to,fav_trave_response
+Where would you like to go to,fav_travel_response
 Add two numbers.,add
 Add two numbers,add
 Add a couple numbers,add
@@ -203,10 +203,10 @@ What's your favorite food,fav_food_que
 what's your favorite food,fav_food_que
 What's your favorite thing to eat,fav_food_que
 How are you doing,feeling_question
-Where would you like to go?,fav_trave_que
+Where would you like to go?,fav_travel_que
 What is your favorite food,fav_food_que
 What is your favorite book,fav_book_que
-where would you like to move,fav_trave_que
+where would you like to move,fav_travel_que
 Can you tell me a jokw,joke_request
 What are you doing,feeling_question
 tell me something funny,joke_request
@@ -252,4 +252,29 @@ What's your number one animal?,fav_animal_que
 My favorite animal is a bug,fav_animal_response
 Do you have a favorite kind of animal?,fav_animal_que
 Pretty good,feeling_response
-what is your favorite place to go to,fav_trave_que
+what is your favorite place to go to,fav_travel_que
+what's your favorite song,fav_song_que
+what's  your favorite state,fav_state_que
+Solid.,fav_state_response
+what is your name?,name_que
+what is your favorite color,fav_col_que
+whats your favorite color,fav_col_que
+what is your favorite song,fav_song_que
+whats your favorite song,fav_song_que
+What is your favorite song,fav_song_que
+Your favorite song is what,fav_song_que
+whats your top favorite song,fav_song_que
+What is your top favorite song,fav_song_que
+My favorite song is Staying Alive,fav_song_response
+wwhat is your favorite song,fav_song_que
+What's your top favorite song,fav_song_que
+Whats your favorite song,fav_song_que
+whats your favorite state,fav_state_que
+My favorite state is solid,fav_state_response
+what is your favorite state,fav_state_que
+your favorite state is what,fav_state_que
+What's your favorite state,fav_state_que
+your name is what,name_que
+whats your favorite book,fav_book_que
+whats your favorite place to visit,fav_travel_que
+who is your favorite celebrity,fav_celeb_que
